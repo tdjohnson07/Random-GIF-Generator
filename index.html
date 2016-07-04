@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Gif</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="jquery-3.0.0.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+    <form id="searchGif">
+      <label for="gifSearch">Search GIFs:</label>
+       <input type="text" name="gifSearch" id="gifSearch"/>
+       <input type="submit"/>
+    </form>
+    <form id="searchStickers">
+      <label for="stickersSearch">Search Stickers:</label>
+       <input type="text" name="stickersSearch" id="stickersSearch"/>
+       <input type="submit"/>
+    </form>
+    <div class="buttonHolder">
+      <button id="random">Random GIF</button>
+      <button id="stickers">Random Sticker</button>
+      <button id="trending">Trending GIF's</button>
+      <button id="trendingStickers">Trending Stickers</button>
+      <div class="container">
+        <img></img>
+        <h4></h4>
+        <ul></ul>
+      </div>
+      <form id="addCaption">
+        <label for="caption">Add Caption:</label>
+        <input type="text" name="caption" id="caption"/>
+        <input type="submit"/>
+      </form>
+      <button id="brighter">Change Color</button>
+      <button id="moveDown">Move Caption Down</button>
+      <button id="moveRight">Move Caption Right</button>
+      <button id="size">Make Bigger</button>
+    </div>
+  </div>
+  </body>
+</html>

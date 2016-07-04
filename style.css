@@ -1,0 +1,67 @@
+body{
+  background-color: darkblue;
+}
+.wrapper{
+  width: 70%;
+  margin: 0 auto;
+  background-color: #800020;
+}
+form{
+  text-align: center;
+}
+label{
+  color: burlywood;
+}
+#searchGif, #searchStickers{
+  margin: 10px auto;
+  padding: 10px;
+
+}
+#random, #stickers, #trending, #trendingStickers{
+  display: inline-block;
+  background-color: burlywood;
+  color: black;
+  height: 70px;
+  width: 150px;
+  border-radius: 40%;
+  margin: 5px auto 15px auto;
+}
+#addCaption, #brighter, #moveDown, #moveRight, #size, #next, #prev{
+  margin: 10px;
+}
+#brighter, #moveDown, #moveRight, #size, #next, #prev{
+  background-color: burlywood;
+  height: 35px;
+  width: 75px;
+  border-radius: 40%;
+}
+#random:hover, #stickers:hover, #trending:hover, #trendingStickers:hover, #brighter:hover,
+ #moveDown:hover, #moveRight:hover, #size:hover, #next:hover, #prev:hover{
+   background-color: lightgray;
+ }
+.buttonHolder{
+  text-align: center;
+}
+.img{
+  position: relative;
+}
+h4{
+  position: absolute;
+  top: 16%;
+  left: -10%;
+  width: 70%;
+  font-size: 3em;
+  opacity: 50%;
+  margin-left: 18%;
+}
+#addCaption, #brighter, #moveDown, #moveRight, #size{
+  display: none;
+}
+li{
+  list-style: none;
+  border: 1px solid black;
+  padding: 10px;
+}
+.lighter{
+  color: white;
+}
