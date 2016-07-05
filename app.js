@@ -41,6 +41,13 @@ $(document).ready(function(){
     nextClick=5;
     nextEnd=10;
   }
+  //function to empty all search fields
+  function clearSearch(){
+    $("#stickersSearch").val("");
+    $("#gifSearch").val("");
+    $("gifTag").val("");
+    $("stickersTag").val("");
+  }
   //function to scroll next and previous page, iterates five results at a time
   // for a total of 25 results
   function nextButton(){
@@ -76,8 +83,7 @@ $(document).ready(function(){
     resetField();
     var search=$("#gifSearch").val();
     var site="http://api.giphy.com/v1/gifs/search?q="+search+"&api_key=dc6zaTOxFJmzC";
-    $("#gifSearch").val("");
-    $("#stickersSearch").val("");
+    clearSearch();
     $.get(site).then(function(response){
       results=response.data;
       for(var i=0; i<5; i++){
@@ -97,8 +103,7 @@ $(document).ready(function(){
     resetField();
     var search=$("#stickersSearch").val();
     var site="http://api.giphy.com/v1/stickers/search?q="+search+"&api_key=dc6zaTOxFJmzC";
-    $("#stickersSearch").val("");
-    $("#gifSearch").val("");
+    clearSearch();
     $.get(site).then(function(response){
       results=response.data;
       for(var i=0; i<5; i++){
@@ -118,9 +123,7 @@ $(document).ready(function(){
     resetField();
     var search=$("#gifTag").val();
     var site="http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=";
-    $("#stickersSearch").val("");
-    $("#gifSearch").val("");
-    $("gifTag").val("");
+    clearSearch();
     $.get(site).then(function(response){
       var picture=response.data.image_url;
       height=Number(response.data.image_height);
@@ -137,10 +140,7 @@ $(document).ready(function(){
     resetField();
     var search=$("#stickersTag").val();
     var site="http://api.giphy.com/v1/stickers/random?api_key=dc6zaTOxFJmzC&tag=";
-    $("#stickersSearch").val("");
-    $("#gifSearch").val("");
-    $("gifTag").val("");
-    $("stickersTag").val("");
+    clearSearch();
     $.get(site).then(function(response){
       var picture=response.data.image_url;
       height=Number(response.data.image_height);
