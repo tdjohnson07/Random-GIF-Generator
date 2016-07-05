@@ -8,11 +8,12 @@ body{
 }
 form{
   text-align: center;
+  display: inline-block;
 }
 label{
   color: burlywood;
 }
-#searchGif, #searchStickers{
+#searchGif, #searchStickers, #tagGif, #tagStickers{
   margin: 10px auto;
   padding: 10px;
 
@@ -47,7 +48,7 @@ label{
 }
 h4{
   position: absolute;
-  top: 16%;
+  top: 20%;
   left: -10%;
   width: 70%;
   font-size: 3em;

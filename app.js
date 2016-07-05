@@ -112,6 +112,45 @@ $(document).ready(function(){
       console.log("fail");
     });
   });
+  //button functionality for random gif with tag
+  $("#tagGif").on("submit",function(event){
+    event.preventDefault();
+    resetField();
+    var search=$("#gifTag").val();
+    var site="http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=";
+    $("#stickersSearch").val("");
+    $("#gifSearch").val("");
+    $("gifTag").val("");
+    $.get(site).then(function(response){
+      var picture=response.data.image_url;
+      height=Number(response.data.image_height);
+      width=Number(response.data.image_width);
+      $(".container img").replaceWith("<img src="+picture+"></img>");
+    }).catch(function(){
+      console.log("fail");
+    });
+    resetShowButtons();
+  });
+  //tag stickers display functionality
+  $("#tagStickers").on("submit",function(event){
+    event.preventDefault();
+    resetField();
+    var search=$("#stickersTag").val();
+    var site="http://api.giphy.com/v1/stickers/random?api_key=dc6zaTOxFJmzC&tag=";
+    $("#stickersSearch").val("");
+    $("#gifSearch").val("");
+    $("gifTag").val("");
+    $("stickersTag").val("");
+    $.get(site).then(function(response){
+      var picture=response.data.image_url;
+      height=Number(response.data.image_height);
+      width=Number(response.data.image_width);
+      $(".container img").replaceWith("<img src="+picture+"></img>");
+    }).catch(function(){
+      console.log("fail");
+    });
+    resetShowButtons();
+  });
   //button functionality for generating random gifs
   $("#random").on("click", function(){
       emptySearch();
@@ -190,12 +229,12 @@ $(document).ready(function(){
   //button for moving caption up and down itterates on upClick
   $("#moveDown").on("click", function(){
     if(upClick%2===0 && captionSubmit){
-      $(".container").find("h4").css("top",+height+30+"px");
+      $(".container").find("h4").css("top",+height+40+"px");
       $("#moveDown").text("move back up");
       upClick++;
     }
     else if(upClick%2===1 && captionSubmit){
-      $(".container").find("h4").css("top", "16%");
+      $(".container").find("h4").css("top", "20%");
       $("#moveDown").text("Move Down");
       upClick++;
     }
