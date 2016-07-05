@@ -1,16 +1,28 @@
 body{
   background-color: darkblue;
+  text-align: center;
+}
+h1{
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 20px;
+  font-size: 50px;
+  color: darkgray;
+  opacity: .5;
 }
 .wrapper{
   width: 70%;
   margin: 0 auto;
   background-color: #800020;
+  border-radius: 10px;
 }
 form{
   text-align: center;
   display: inline-block;
 }
 label{
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: burlywood;
 }
 #searchGif, #searchStickers, #tagGif, #tagStickers{
@@ -19,6 +31,9 @@ label{
 
 }
 #random, #stickers, #trending, #trendingStickers{
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   display: inline-block;
   background-color: burlywood;
   color: black;
@@ -47,12 +62,15 @@ label{
   position: relative;
 }
 h4{
+
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   position: absolute;
   top: 20%;
   left: -10%;
   width: 70%;
   font-size: 3em;
-  opacity: 50%;
+  opacity: .75;
   margin-left: 18%;
 }
 #addCaption, #brighter, #moveDown, #moveRight, #size{
